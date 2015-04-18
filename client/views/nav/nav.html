@@ -1,0 +1,31 @@
+<template name="nav">
+    <div id="navbar-wrapper">
+  <div class="content-wrapper">
+  <header class="header {{headerClass}}">
+    <a href="#menu" class="mobile-only mobile-menu-button button">
+      {{{icon "menu"}}}
+    </a>
+
+    {{> Template.dynamic template=logoTemplate}}
+    <p id="logo-heading">Discovering the best new comic books, every day</p>
+    {{#with secondaryNav}}
+      <div class="nav secondary-nav desktop-nav header-module desktop-only">
+        {{#each this}}
+          {{> UI.dynamic template=getTemplate}}
+        {{/each}}
+      </div>
+    {{/with}}
+    
+    {{#with primaryNav}}
+      <div class="nav secondary-nav desktop-nav header-module desktop-only">
+        {{#each this}}
+          {{> UI.dynamic template=getTemplate}}
+        {{/each}}
+      </div>
+    {{/with}}
+
+    
+  </header>
+</div>
+</div>
+</template>

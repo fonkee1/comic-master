@@ -1,0 +1,23 @@
+<template name="postsDaily">
+  <div class="grid">
+<<<<<<< Updated upstream
+  	<div class="pull-right">{{>search}}</div>
+    {{#each days}}
+      {{> Template.dynamic template=before_day}}
+      <h2 class="posts-day-heading"><div style="font-size:1.25em;color:#FF3700;display:inline-block;">{{getDay date}}</div>   <div style="display:inline-block;">{{formatDate date "MMMM Do"}}</div></h2>
+=======
+    
+  	<div class="pull-right">{{> search}}</div>
+    {{#each days}}
+      {{> Template.dynamic template=before_day}}
+      <h2 class="posts-day-heading"><div style="font-size:1.25em;color:#6BBD45;display:inline-block;">{{getDay date}}</div>   <div style="display:inline-block;">{{formatDate date "MMMM Do"}}</div></h2>
+
+>>>>>>> Stashed changes
+
+      {{> Template.dynamic template=singleDay data=context}}
+
+      {{> Template.dynamic template=after_day}}
+    {{/each}}
+    <a class="load-more-days-button grid-module" href="{{loadMoreDaysUrl}}"><span><i class="fa fa-angle-down"></i>  Load more days</span></a>
+  </div>
+</template>
